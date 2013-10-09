@@ -7,29 +7,12 @@
 @managed_park: #dce8cb;
 @school: #e6e2dc;
 
-Map {
-}
-
-#border {
-  line-color: #777;
-
-  line-width: 5;
-
-  [zoom>=13] {
-    line-width: 10;
-  }
-}
-
 #water {
   polygon-fill: @water;
 
   [ftype=466] {
     polygon-fill: @marsh;
   }
-}
-
-#land {
-  polygon-fill: @land;
 }
 
 #foreshore,
@@ -51,22 +34,6 @@ Map {
 
   [zoom>=16] {
     line-smooth: 0.5;
-  }
-}
-
-#cpad_units {
-  polygon-fill: @park;
-
-  [zoom>=15] {
-    polygon-smooth: 0.5;
-  }
-}
-
-#park_units {
-  polygon-fill: @managed_park;
-
-  [zoom>=15] {
-    polygon-smooth: 0.5;
   }
 }
 
@@ -98,20 +65,6 @@ Map {
   [zoom>=14] {
     line-width: 2;
   }
-}
-
-#parking
-{
-  polygon-fill: #f5f5e4;
-  
-  [zoom>=16] {
-    polygon-smooth: 0.5;
-  }
-}
-
-#school
-{
-  polygon-fill: @school;
 }
 
 #buildings
@@ -147,32 +100,6 @@ Map {
   }
 }
 
-#battery-labels
-{
-  text-fill: #5a5c5b;
-  text-halo-radius: 1.5;
-  text-halo-fill: @land;
-  text-size: 10;
-  text-name: [name];
-  text-transform: capitalize;
-  text-face-name: "Frutiger LT 55 Roman Italic";
-  text-wrap-width: 20;
-}
-
-#fields
-{
-  polygon-fill: #d6e0b5;
-
-  [leisure='golf_course']
-  {
-    polygon-fill: #cce1c5;
-  }
-
-  [zoom>=16] {
-    polygon-smooth: 0.5;
-  }
-}
-
 #water-lines
 {
   line-width: 0.4;
@@ -183,55 +110,6 @@ Map {
   [zoom>=15]
   {
     line-width: 1;
-  }
-}
-
-#contour
-{
-  [zoom>=15][int=500]
-  {
-    line-width: 0.2;
-    line-color: darken(#ccc, 15%);
-    line-smooth: 0.5;
-    comp-op: multiply;
-    
-    text-fill: darken(#ccc, 15%);
-	text-halo-radius: 0;
-    text-size: 9;
-    text-name: [elev];
-    text-face-name: "Frutiger LT 45 Light Bold";
-    text-placement: line;
-  }
-
-  [zoom>=17][int=100]
-  {
-    line-width: 0.3;
-    line-color: darken(#ccc, 5%);
-    line-smooth: 0.5;
-    comp-op: multiply;
-
-    text-fill: darken(#ccc, 5%);
-    text-halo-radius: 0;
-    text-size: 9;
-    text-name: [elev];
-    text-face-name: "Frutiger LT 45 Light Regular";
-    text-placement: line;
-  }
-
-  [zoom>=17][int=50]
-  {
-    line-width: 0.15;
-    line-color: darken(#ccc, 5%);
-    line-smooth: 0.5;
-    comp-op: multiply;
-  }
-
-  [zoom>=17][int=10]
-  {
-    line-width: 0.15;
-    line-color: darken(#ccc, 2%);
-    line-smooth: 0.5;
-    comp-op: multiply;
   }
 }
 
@@ -315,20 +193,4 @@ Map {
     line-opacity: 0.5;
     line-cap: round;
   }
-}
-
-#trail-labels {
-  text-fill: #5a5c5b;
-  text-halo-radius: 1.5;
-  text-halo-fill: @land;
-  text-size: 11;
-  text-dy: 8;
-  text-name: [trail_name];
-  text-face-name: "Frutiger LT 45 Light Bold";
-  text-placement: line;
-}
-
-#dual-carriageways {
-  line-width: 1;
-  line-color: #fc0;
 }
