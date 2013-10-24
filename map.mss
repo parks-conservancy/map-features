@@ -32,9 +32,9 @@
     line-width: 1.5;
   }
 
-  [zoom>=16] {
-    line-smooth: 0.5;
-  }
+  //[zoom>=16] {
+    //line-smooth: 0.5;
+  //}
 }
 
 #offshore-boundaries {
