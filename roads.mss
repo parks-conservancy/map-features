@@ -1,5 +1,5 @@
 @controlled_access: #fc9e36;
-@controlled_access_stroke: #cfa18f;
+@controlled_access_stroke: #996666;
 
 @highway: #fee273;
 @highway_stroke: #cfa18f;
@@ -52,6 +52,10 @@
         line-width: 4;
       }
 
+      [zoom>=13] {
+        line-width: 5;
+      }
+
       [zoom>=14] {
         [tunnel='yes'] {
           line-opacity: 0.3;
@@ -59,7 +63,7 @@
       }
 
       [zoom>=15] {
-        line-width: 7;
+        line-width: 10;
       }
 
       [zoom>=16] {
@@ -86,6 +90,10 @@
       line-width: 2.5;
     }
 
+    [zoom>=13] {
+        line-width: 3.5;
+    }
+
     [zoom>=14] {
       [tunnel='yes'] {
         line-opacity: 0.2;
@@ -93,7 +101,7 @@
     }
 
     [zoom>=15] {
-      line-width: 5.5;
+      line-width: 8.5;
     }
 
     [zoom>=16] {
