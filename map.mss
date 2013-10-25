@@ -193,4 +193,10 @@
     line-opacity: 0.5;
     line-cap: round;
   }
+  /*
+  [zoom>=18][ada='yes'] {
+	marker-file: url("images/accessibility_14x14px_buffer.svg");
+    marker-spacing: 30;
+  }
+  */
 }
