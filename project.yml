@@ -314,6 +314,7 @@ Layer:
   - <<: *layer
     name: road_z10
     id:   road_z10
+    class: road
     properties:
       cache-features: on
       minzoom: 10
