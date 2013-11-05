@@ -150,10 +150,12 @@
     ::outline {
       line-width: 3.5;
       line-simplify: 0;
+      line-smooth: 0.25;
     }
 
     line-width: 1.75;
     line-simplify: 0;
+    line-smooth: 0.25;
   }
   
   [zoom>=16] {
