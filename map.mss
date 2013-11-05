@@ -41,7 +41,7 @@
   line-color: #6eac77;
   line-opacity: 0.5;
   line-width: 0.25;
-  line-dasharray: 5, 2;
+  line-dasharray: 5, 2.5, 1, 2.5;
   line-cap: round;
 
   [zoom>=12] {
@@ -53,17 +53,17 @@
   }
 
   [zoom>=14] {
-    line-dasharray: 10, 2, 2, 2;
-    line-width: 0.5;
+    line-dasharray: 10, 4, 2, 4;
+    line-width: 1;
   }
   
   [zoom>=15] {
-    line-width: 1;
-    line-dasharray: 15, 2, 3.5, 2;
+    line-dasharray: 12.5, 5, 2.5, 5;
   }
-  
-  [zoom>=14] {
-    line-width: 2;
+
+  [zoom>=16] {
+    line-dasharray: 15, 6, 3, 6;
+    line-width: 1.5;
   }
 }
 
