@@ -129,7 +129,7 @@
   line-join: miter;
   line-cap: round;
 
-  // remove noise by simplifying to 10m
+  // remove noise by simplifying to 10px
   line-simplify: 10;
   line-simplify-algorithm: visvalingam-whyatt;
 
