@@ -149,15 +149,15 @@
   [highway='motorway_link'],
   {
     ::stroke {
-      line-color: @highway_stroke;
-      line-width: 0;
+      line-color: mix(@highway_stroke, @controlled_access_stroke, 50);
+      line-width: 2.5;
 
       [zoom>=14] {
         [tunnel='yes'] {
           line-opacity: 0.3;
         }
 
-        line-width: 2.5;
+        line-color: @highway_stroke;
       }
 
       [zoom>=15] {
@@ -173,15 +173,15 @@
       }
     }
 
-    line-color: @highway;
-    line-width: 0;
+    line-color: mix(@highway, @controlled_access, 50);
+    line-width: 2;
 
     [zoom>=14] {
       [tunnel='yes'] {
         line-opacity: 0.2;
       }
 
-      line-width: 2;
+      line-color: @highway;
     }
 
     [zoom>=15] {

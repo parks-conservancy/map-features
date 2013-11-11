@@ -367,7 +367,7 @@ Layer:
           FROM planet_osm_line
           WHERE way && !bbox!
             AND 
-              (tags -> 'highway' IN ('motorway', 'trunk', 'primary',
+              (tags -> 'highway' IN ('motorway', 'motorway_link', 'trunk', 'primary',
                                      'secondary', 'tertiary', 'residential',
                                      'unclassified', 'service', 'road')
               AND (NOT tags ? 'access' OR tags -> 'access' NOT IN ('no', 'false')))
