@@ -8,33 +8,42 @@
 @school: #e6e2dc;
 
 #water {
-  polygon-fill: @water;
+  // layer marshes under the coastline stroke (otherwise their edges are
+  // coincident and cover it)
+  ::marsh {
+    [ftype=466] {
+      polygon-fill: @marsh;
+      line-color: @marsh;
+    }
+  }
 
-  [ftype=466] {
-    polygon-fill: @marsh;
+  [ftype!=466] {
+    [areasqkm>=0.075],
+    [zoom>=14][areasqkm>=0.015],
+    [zoom>=15][areasqkm>=0],
+    {
+      ::coastline {
+	line-color: @coastline;
+	line-width: 1;
+
+	[zoom>=12] {
+	  line-width: 1.5;
+	}
+
+	[zoom>=14] {
+	  line-width: 3;
+	}
+      }
+    }
+
+    polygon-fill: @water;
+    line-color: @water;
   }
 }
 
 #foreshore,
 #beach {
   polygon-fill: @beach;
-}
-
-#coastline {
-  line-color: @coastline;
-  line-width: 0.25;
-
-  [zoom>=12] {
-    line-width: 0.75;
-  }
-
-  [zoom>=14] {
-    line-width: 1.5;
-  }
-
-  //[zoom>=16] {
-    //line-smooth: 0.5;
-  //}
 }
 
 #offshore-boundaries {
